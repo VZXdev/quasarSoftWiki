@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth" xmlns:x-transition="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/png" href="NeoWareWiki/logo.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Команды | NeoWare Wiki</title>
+    <meta name="description" content="NeoWare Script Wiki">
+    <link rel="stylesheet" href="/NeoWareWiki/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Wix+Madefor+Display:wght@600;700&display=swap" rel="stylesheet">
+    <script defer src="https://cdn.jsdelivr.net/npm/@alpinejs/collapse@3.x.x/dist/cdn.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/awesomplete/1.1.5/awesomplete.min.js" integrity="sha512-HcBl0GSJvt4Qecm4srHapirUx0HJDi2zYXm6KUKNNUGdTIN9cBwakVZHWmRVj4MKgy1AChqhWGYcMDbRKgO0zg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</head>
+<body x-data="{ docs: false, mobile: false }" class="relative">
+<header @click.outside="mobile = false" class="sticky top-0 z-50 bg-white shadow-md shadow-slate-900/5 transition duration-500">
+    <div class="mx-auto max-w-7xl flex flex-wrap items-center space-x-8 justify-between px-6 lg:px-8 py-4">
+        <div class="flex items-center">
+            <button @click="docs = ! docs" type="button" class="relative lg:hidden mr-3" aria-label="Open navigation">
+                <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" class="h-6 w-6 stroke-slate-500">
+                    <path d="M4 7h16M4 12h16M4 17h16"></path>
+                </svg>
+            </button>
+            <a aria-label="Home page" href="/NeoWareWiki/">
+                <p class="h-7 hidden sm:block">NeoWare Wiki</p>
+            </a>
+            <nav class="hidden lg:flex lg:space-x-8 lg:ml-12 xl:ml-16">
+                <a class='text-sm hover:text-sky-500 py-2.5 text-slate-900 font-display font-semibold' href='https://krytickyt.github.io/NeoWare/'>Главная</a>
+                <a class='text-sm hover:text-sky-500 py-2.5 text-slate-900 font-display font-semibold' href='https://discord.com/invite/2rxyndXyUB'>Discord</a>
+            </nav>
+        </div>
+    </div>
+</header>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/awesomplete/1.1.5/awesomplete.min.js" integrity="sha512-HcBl0GSJvt4Qecm4srHapirUx0HJDi2zYXm6KUKNNUGdTIN9cBwakVZHWmRVj4MKgy1AChqhWGYcMDbRKgO0zg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<div class="relative mx-auto flex max-w-7xl justify-center px-2 lg:px-8">
+    <div class="hidden lg:relative lg:block lg:flex-none">
+        <div class="sticky top-[4.5rem] -ml-0.5 h-[calc(100vh-4.5rem)] w-64 overflow-y-auto overflow-x-hidden pt-16 pl-0.5 pr-8 xl:w-72 xl:pr-16">
+            <nav class="text-sm">
+                <ul class="space-y-9">
+                    <li>
+                        <h2 class="font-display font-semibold text-slate-900">API</h2>
+                        <ul class="mt-4 space-y-4 border-slate-200">
+                            <li class="relative">
+                                <a class="block w-full pl-3.5 before:pointer-events-none before:absolute before:left-0.5 before:top-1/2 before:h-0.5 before:w-1.5 before:-translate-y-1/2 text-slate-500 before:hidden before:bg-slate-300 hover:text-slate-900 hover:before:block" href="/NeoWareWiki/">Общее</a>
+                            </li>
+                            <li class="relative">
+                                <a class='block w-full pl-3.5 before:pointer-events-none before:absolute before:left-0.5 before:top-1/2 before:h-0.5 before:w-1.5 before:-translate-y-1/2 text-slate-500 before:hidden before:bg-slate-300 hover:text-slate-900 hover:before:block' href='/NeoWareWiki/botapi.html'>Боты</a>
+                            </li>
+                            <li class="relative">
+                                <a class="block w-full pl-3.5 before:pointer-events-none before:absolute before:left-0.5 before:top-1/2 before:h-0.5 before:w-1.5 before:-translate-y-1/2 text-sky-500 before:bg-sky-500" href="/NeoWareWiki/commands.html">Команды</a>
+                            </li>
+                            <li class="relative">
+                                <a class="block w-full pl-3.5 before:pointer-events-none before:absolute before:left-0.5 before:top-1/2 before:h-0.5 before:w-1.5 before:-translate-y-1/2 text-slate-500 before:hidden before:bg-slate-300 hover:text-slate-900 hover:before:block" href="/NeoWareWiki/parameters.html">Параметры ботов</a>
+                            </li>
+                            <li class="relative">
+                                <a class="block w-full pl-3.5 before:pointer-events-none before:absolute before:left-0.5 before:top-1/2 before:h-0.5 before:w-1.5 before:-translate-y-1/2 text-slate-500 before:hidden before:bg-slate-300 hover:text-slate-900 hover:before:block" href="/NeoWareWiki/webapi.html">WebAPI</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <h2 class="font-display font-semibold text-slate-900">Code</h2>
+                        <ul class="mt-4 space-y-4 border-slate-200">
+                            <li class="relative">
+                                <a class='block w-full pl-3.5 before:pointer-events-none before:absolute before:left-0.5 before:top-1/2 before:h-0.5 before:w-1.5 before:-translate-y-1/2 text-slate-500 before:hidden before:bg-slate-300 hover:text-slate-900 hover:before:block' href='/NeoWareWiki/events.html'>Ивенты</a>
+                            </li>
+                            <li class="relative">
+                                <a class='block w-full pl-3.5 before:pointer-events-none before:absolute before:left-0.5 before:top-1/2 before:h-0.5 before:w-1.5 before:-translate-y-1/2 text-slate-500 before:hidden before:bg-slate-300 hover:text-slate-900 hover:before:block' href='/NeoWareWiki/examples.html'>Примеры</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+                </li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+    <div class="min-w-0 max-w-2xl flex-auto px-4 pt-16 lg:max-w-none lg:pl-8 lg:pr-0 xl:px-16">
+        <article>
+            <div class="prose prose-slate max-w-none prose-headings:scroll-mt-28 prose-headings:font-display prose-headings:font-semibold lg:prose-headings:scroll-mt-[8.5rem] prose-lead:text-slate-500 prose-a:font-semibold prose-a:no-underline prose-pre:rounded-xl prose-pre:bg-slate-900 prose-pre:shadow-lg">
+                <h2 id="events">Команды</h2>
+                <p>Функционал скриптов позволяет создавать свои подкоманды в .bots.</p>
+                <p>Создать свою команду очень просто:</p>
+                <h3 id="example">Пример использования</h3>
+<pre class="hljs" style="color: rgb(169, 183, 198); background: rgb(40, 43, 46); display: block; overflow-x: auto; padding: 0.5em;"><span class="hljs-function"><span class="hljs-keyword" style="color: rgb(204, 120, 50);">function</span> <span class="hljs-title" style="color: rgb(255, 198, 109);">onCommand_test</span>(<span class="hljs-params">args</span>) </span>{
+    <span class="hljs-comment" style="color: grey;">//Выполняется при вводе команды .bots test</span>
+    <span class="hljs-comment" style="color: grey;">//Индексы аргументов:</span>
+    <span class="hljs-comment" style="color: grey;">//</span>
+    <span class="hljs-comment" style="color: grey;">//args[0] - Сама команда</span>
+    <span class="hljs-comment" style="color: grey;">//args[1-...] это ваши аргументы команды</span>
+    ScriptAPI.sendMessage(<span class="hljs-string" style="color: rgb(106, 135, 89);">"TestCommand!"</span>);
+    ScriptAPI.sendMessage(<span class="hljs-string" style="color: rgb(106, 135, 89);">"command: "</span> + args[<span class="hljs-number" style="color: rgb(104, 151, 187);">0</span>]); <span class="hljs-comment" style="color: grey;">//test</span>
+    ScriptAPI.sendMessage(<span class="hljs-string" style="color: rgb(106, 135, 89);">"arg-1: "</span> + args[<span class="hljs-number" style="color: rgb(104, 151, 187);">1</span>]); <span class="hljs-comment" style="color: grey;">//первый аргумент</span>
+}</pre>
+                <p>Важно! в onCommand_вашакоманда, команда должна быть вся написана с мальенких букв, иначе работать не будет!</p>
+            </div>
+        </article>
+    </div>
+    <footer>
+        <div class="mx-auto max-w-7xl px-6 pb-8 pt-16 lg:px-8 lg:pt-28"></div>
+    </footer>
+</div>
+</body>
+</html>

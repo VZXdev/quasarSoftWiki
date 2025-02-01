@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth" xmlns:x-transition="http://www.w3.org/1999/xhtml">
+<head>
+  <meta charset="UTF-8">
+  <link rel="icon" type="image/png" href="NeoWareWiki/logo.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Боты | NeoWare Wiki</title>
+  <meta name="description" content="NeoWare Script Wiki">
+  <link rel="stylesheet" href="/NeoWareWiki/css/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Wix+Madefor+Display:wght@600;700&display=swap" rel="stylesheet">
+  <script defer src="https://cdn.jsdelivr.net/npm/@alpinejs/collapse@3.x.x/dist/cdn.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/awesomplete/1.1.5/awesomplete.min.js" integrity="sha512-HcBl0GSJvt4Qecm4srHapirUx0HJDi2zYXm6KUKNNUGdTIN9cBwakVZHWmRVj4MKgy1AChqhWGYcMDbRKgO0zg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</head>
+<body x-data="{ docs: false, mobile: false }" class="relative">
+<header @click.outside="mobile = false" class="sticky top-0 z-50 bg-white shadow-md shadow-slate-900/5 transition duration-500">
+  <div class="mx-auto max-w-7xl flex flex-wrap items-center space-x-8 justify-between px-6 lg:px-8 py-4">
+    <div class="flex items-center">
+      <button @click="docs = ! docs" type="button" class="relative lg:hidden mr-3" aria-label="Open navigation">
+        <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" class="h-6 w-6 stroke-slate-500">
+          <path d="M4 7h16M4 12h16M4 17h16"></path>
+        </svg>
+      </button>
+      <a aria-label="Home page" href="/NeoWareWiki/">
+        <p class="h-7 hidden sm:block">NeoWare Wiki</p>
+      </a>
+      <nav class="hidden lg:flex lg:space-x-8 lg:ml-12 xl:ml-16">
+        <a class='text-sm hover:text-sky-500 py-2.5 text-slate-900 font-display font-semibold' href='https://krytickyt.github.io/NeoWare/'>Главная</a>
+        <a class='text-sm hover:text-sky-500 py-2.5 text-slate-900 font-display font-semibold' href='https://discord.com/invite/2rxyndXyUB'>Discord</a>
+      </nav>
+    </div>
+  </div>
+</header>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/awesomplete/1.1.5/awesomplete.min.js" integrity="sha512-HcBl0GSJvt4Qecm4srHapirUx0HJDi2zYXm6KUKNNUGdTIN9cBwakVZHWmRVj4MKgy1AChqhWGYcMDbRKgO0zg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<div class="relative mx-auto flex max-w-7xl justify-center px-2 lg:px-8">
+  <div class="hidden lg:relative lg:block lg:flex-none">
+    <div class="sticky top-[4.5rem] -ml-0.5 h-[calc(100vh-4.5rem)] w-64 overflow-y-auto overflow-x-hidden pt-16 pl-0.5 pr-8 xl:w-72 xl:pr-16">
+      <nav class="text-sm">
+        <ul class="space-y-9">
+          <li>
+            <h2 class="font-display font-semibold text-slate-900">API</h2>
+            <ul class="mt-4 space-y-4 border-slate-200">
+              <li class="relative">
+                <a class="block w-full pl-3.5 before:pointer-events-none before:absolute before:left-0.5 before:top-1/2 before:h-0.5 before:w-1.5 before:-translate-y-1/2 text-slate-500 before:hidden before:bg-slate-300 hover:text-slate-900 hover:before:block" href="/NeoWareWiki/">Общее</a>
+              </li>
+              <li class="relative">
+                <a class='block w-full pl-3.5 before:pointer-events-none before:absolute before:left-0.5 before:top-1/2 before:h-0.5 before:w-1.5 before:-translate-y-1/2 text-sky-500 before:bg-sky-500' href='/NeoWareWiki/botapi.html'>Боты</a>
+              </li>
+              <li class="relative">
+                <a class="block w-full pl-3.5 before:pointer-events-none before:absolute before:left-0.5 before:top-1/2 before:h-0.5 before:w-1.5 before:-translate-y-1/2 text-slate-500 before:hidden before:bg-slate-300 hover:text-slate-900 hover:before:block" href="/NeoWareWiki/commands.html">Команды</a>
+              </li>
+              <li class="relative">
+                <a class="block w-full pl-3.5 before:pointer-events-none before:absolute before:left-0.5 before:top-1/2 before:h-0.5 before:w-1.5 before:-translate-y-1/2 text-slate-500 before:hidden before:bg-slate-300 hover:text-slate-900 hover:before:block" href="/NeoWareWiki/parameters.html">Параметры ботов</a>
+              </li>
+              <li class="relative">
+                  <a class="block w-full pl-3.5 before:pointer-events-none before:absolute before:left-0.5 before:top-1/2 before:h-0.5 before:w-1.5 before:-translate-y-1/2 text-slate-500 before:hidden before:bg-slate-300 hover:text-slate-900 hover:before:block" href="/NeoWareWiki/webapi.html">WebAPI</a>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <h2 class="font-display font-semibold text-slate-900">Code</h2>
+            <ul class="mt-4 space-y-4 border-slate-200">
+              <li class="relative">
+                <a class='block w-full pl-3.5 before:pointer-events-none before:absolute before:left-0.5 before:top-1/2 before:h-0.5 before:w-1.5 before:-translate-y-1/2 text-slate-500 before:hidden before:bg-slate-300 hover:text-slate-900 hover:before:block' href='/NeoWareWiki/events.html'>Ивенты</a>
+              </li>
+              <li class="relative">
+                <a class='block w-full pl-3.5 before:pointer-events-none before:absolute before:left-0.5 before:top-1/2 before:h-0.5 before:w-1.5 before:-translate-y-1/2 text-slate-500 before:hidden before:bg-slate-300 hover:text-slate-900 hover:before:block' href='/NeoWareWiki/examples.html'>Примеры</a>
+              </li>
+            </ul>
+          </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+  <div class="min-w-0 max-w-2xl flex-auto px-4 pt-16 lg:max-w-none lg:pl-8 lg:pr-0 xl:px-16">
+    <article>
+      <div class="prose prose-slate max-w-none prose-headings:scroll-mt-28 prose-headings:font-display prose-headings:font-semibold lg:prose-headings:scroll-mt-[8.5rem] prose-lead:text-slate-500 prose-a:font-semibold prose-a:no-underline prose-pre:rounded-xl prose-pre:bg-slate-900 prose-pre:shadow-lg">
+        <h2 id="bots">Боты</h2>
+        <p></p>
+                <h3 id="example-bettercaptcha">JavaScript</h3>
+        <pre><code>
+pBot - Возращается любым ивентом. Это сам бот.
+
+boolean    | pBot.isRunning() - Вернет true, если бот запущен.
+boolean    | pBot.hasMap() - Вернет true если у бота имеется карта в инвентаре.
+boolean    | pBot.isOnline() - Вернет true, если бот онлайн.
+Integer    | pBot.currentWindowID() - Вернет ID текущего меню.
+Integer    | pBot.getPort() - Вернет порт текущего сервера.
+String     | pBot.windowTitle - Вернет название текущего меню.
+String     | pBot.getNickname() - Никнейм бота.
+String     | pBot.getHost() - Вернет IP текущего сервера.
+void       | pBot.changeNickname(String nickname) - Изменить никнейм бота.
+void       | pBot.jump() - Заставляет подпрыгнуть бота.
+void       | pBot.disconnect(String reason) - Отключить бота от сервера.
+void       | pBot.stopBot() - Отключить и остановить бота.
+void       | pBot.stopAndRemove() - Отключить и удалить бота.
+void       | pBot.strafe(float yaw, final double speed, double forward, double direction) - Установка strafe движения бота (использовать в onUpdate).
+void       | pBot.reconnect() - Переподключить бота к серверу.
+void       | pBot.swapHands() - Положить предмет из правой руки в левую.
+void       | pBot.changeSlot(int slot) - Сменить активный слот в хотбаре.
+void       | pBot.dropItem(int slot) - Выкинет предмет из инвентаря.
+void       | pBot.sendMessage(String msg) - Отправить сообщение от бота.
+void       | pBot.useItem() - Нажмет пкм по текущему предмету в хотбаре.
+void       | pBot.closeWindow() - Закрыть гуи у бота (Инвентарь, сундук и т.д.)
+void       | pBot.setFlying(boolean set) - Установить статус полета у бота.
+void       | pBot.rclickStop() - Остановить нажатие пкм у бота.
+void       | pBot.leftClick() - Бот нажмет лкм.
+void       | pBot.windowClick(int slot, int mouseButton) - Нажмет на предмет в текущем инвентаре.
+void       | pBot.rightClick(boolean hold) - Бот нажмет пкм.
+void       | pBot.setHost(String host) - Установить IP сервера.
+void       | pBot.setPort(int port) - Установить порт сервера.
+void       | pBot.clickBlock(int x, int y, int z, String enumFace);
+void       | pBot.clickEntity(int id);
+ProxyUtil  | pBot.getProxy() - Получить прокси бота.
+
+Если вы ищите isRegistered(), то прочтите раздел "Параметры ботов"
+------------------------------------------------------------
+
+PBotWorld     | pBot.getWorld() - Мир, в котором находится бот.
+List<.Entity> | pBot.getWorld().loadedEntityList - Список всех сущностей в мире.
+IBlockState   | pBot.getWorld().getBlockState(blockPos) - Получить блок по координатам.
+IBlockState   | pBot.getWorld().getBlockState(blockPos) - Получить блок по координатам.
+
+------------------------------------------------------------
+
+PBotEntity       | pBot.player - Бот в виде PlayerEntity, координаты, инвентарь и т.д.
+Container        | pBot.player.openContainer - Инвентарь бота.
+List<.ItemStack> | pBot.player.openContainer.getInventory() - Список предметов в инвентаре.
+Integer          | pBot.player.openContainer.windowId - Вернет ID текущего меню.
+Double           | pBot.player.posX - Координата X бота.
+Double           | pBot.player.posY - Координата Y бота.
+Double           | pBot.player.posZ - Координата Z бота.
+Float            | pBot.player.rotationYaw - Yaw позиция камеры бота.
+Float            | pBot.player.rotationPitch - Pitch позиция камеры бота.
+Boolean          | pBot.player.onGround - Касание бота с землей.
+Boolean          | pBot.mc.gameSettings.keyBindForward.pressed - Управление движением вперед.
+Boolean          | pBot.mc.gameSettings.keyBindBack.pressed - Управление движением назад.
+Boolean          | pBot.mc.gameSettings.keyBindLeft.pressed - Управление движением влево.
+Boolean          | pBot.mc.gameSettings.keyBindRight.pressed - Управление движением вправо.
+Boolean          | pBot.mc.gameSettings.keyBindJump.pressed - Управление прыжком.
+Boolean          | pBot.mc.gameSettings.keyBindSneak.pressed - Управление приседанием.
+Boolean          | pBot.mc.gameSettings.keyBindSprint.pressed - Управление спиртом/бегом.
+Некоторые из выше перечисленных переменных можно изменять, например:
+pBot.mc.gameSettings.keyBindJump.pressed = true;
+pBot.player.rotationYaw = 180;
+
+Boolean          | pBot.player.isInWater() - Вернет true, если бот находится в воде.
+Boolean          | pBot.player.isCreative() - Вернет true, если бот находится в Creative.
+Boolean          | pBot.player.isSneaking() - Вернет true, если бот находится на шифте.
+Boolean          | pBot.player.isInLava() - Вернет true, если бот находится в лаве.
+Boolean          | pBot.player.isBurning() - Вернет true, если бот горит.
+Boolean          | pBot.player.isSprinting() - Вернет true, если бот бежит.
+Boolean          | pBot.player.isOnLadder() - Вернет true, если находится на лестнице.
+Float            | pBot.player.getHealth() - Вернет кол-во здоровья у бота.
+Integer          | pBot.player.experienceLevel - Вернет уровень опыта у бота.
+
+
+</code></pre>
+            
+      </div>
+    </article>
+  </div>
+  <footer>
+    <div class="mx-auto max-w-7xl px-6 pb-8 pt-16 lg:px-8 lg:pt-28"></div>
+  </footer>
+</div>
+</body>
+</html>
